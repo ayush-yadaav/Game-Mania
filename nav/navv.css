@@ -1,0 +1,75 @@
+/* Basic Styling */
+#nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px;
+    /* background: #333; */
+    color: black;
+}
+
+#nav #logo h1 {
+    font-size: 1.7rem;
+    color: black;
+}
+
+#nav #nav-item ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav #nav-item ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Responsive Styles */
+#menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#nav-item {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    #nav-item {
+        display: none; /* Hide the menu initially */
+        position: absolute;
+        top: 75px;
+        right: 0;
+        background-color: whitesmoke;
+        color: black;
+        /* background: rgba(191, 93, 93, 0.806); */
+        /* backdrop-filter: blur(15px); */
+        flex-direction: column;
+        width: 40%;
+        padding: 20px 0;
+    }
+
+    #nav-item ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #nav-item ul li a {
+        font-size: 1.2rem;
+        color: black;
+    }
+    #nav-item ul li a :hover{
+        border: 2px solid white;
+    }
+    #nav-item.active {
+        display: flex; /* Show the menu when active */
+    }
+}
